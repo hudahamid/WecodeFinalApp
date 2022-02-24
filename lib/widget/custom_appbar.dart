@@ -19,14 +19,15 @@ class customAppbarWiedget extends StatelessWidget with PreferredSizeWidget {
         color:Colors.deepPurpleAccent,
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 7,), 
         child: Text(
-                    'Online Shopping',
-                    style: TextStyle(
-                            color: Colors.white, fontSize: 24, fontFamily: 'Avenir',fontWeight: FontWeight.bold
-                      ),
+                    title,
+                    style: Theme.of(context).textTheme.headline2!.copyWith(color: Colors.white)
+                          //  colo
                       ),
                     ),
                     iconTheme: IconThemeData(color: Colors.deepPurpleAccent),
-                    actions: [IconButton(icon:Icon(Icons.favorite),onPressed: (){})],
+                    actions: [IconButton(icon:Icon(Icons.favorite),onPressed: (){
+                      Navigator.pushNamed(context, '/wishlistScreen');
+                    })],
       
 
     );

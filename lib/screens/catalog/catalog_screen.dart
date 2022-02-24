@@ -5,13 +5,13 @@ import 'package:finalwecodeproject/widget/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class homeScreen extends StatelessWidget {
-  static  const  String routeName= '/';
+class catalogScreen extends StatelessWidget {
+  static  const  String routeName= '/catalog';
   
   static Route route(){
     return  MaterialPageRoute(
       settings: RouteSettings(name: routeName),
-      builder: (_)=> homeScreen()
+      builder: (_)=> catalogScreen()
       
       );
 
@@ -19,13 +19,13 @@ class homeScreen extends StatelessWidget {
   }
 
 
-  const homeScreen({ Key? key }) : super(key: key);
+  const catalogScreen({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       
-      appBar: customAppbarWiedget(title:'Online Shopping'),
+      appBar: customAppbarWiedget(title:'catalog'),
      
       bottomNavigationBar: custom_navBar(),
       

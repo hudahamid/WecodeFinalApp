@@ -1,8 +1,10 @@
 import 'dart:ui';
-
+import 'package:finalwecodeproject/config/app_router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'screens/home/home_screen.dart';
+import 'widget/customNavBar.dart';
 import 'widget/custom_appbar.dart';
 
 void main() {
@@ -21,46 +23,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      // routing
+      onGenerateRoute: AppRouter.onGenrateRoute,
+      initialRoute: homeScreen.routeName,
 
-      home: homeScreen()
-    );
-  }
-}
-
-class homeScreen extends StatelessWidget {
-  const homeScreen({ Key? key }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: customAppbarWiedget(title:'Online Shopping'),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.deepPurpleAccent,
-        child: Container(
-          height: 70,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-                                 IconButton(onPressed: (){ Navigator.pushNamed(context, '/');  },
-                                    icon: Icon(Icons.home, color: Colors.white)
-                                    ),
-
-                                    IconButton(onPressed: (){   Navigator.pushNamed(context, '/');  },
-                                                icon: Icon(Icons.shopping_cart,color: Colors.white)
-                                    ),
-
-                                      IconButton(onPressed: (){   Navigator.pushNamed(context, '/');  },
-                                                icon: Icon(Icons.person,color: Colors.white)
-                                    ),
-
-                                    ],
-                                    ),
-
-
-        ),
-      ),
-      
+      home: homeScreen( )
     );
   }
 }
