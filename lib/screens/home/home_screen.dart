@@ -1,4 +1,5 @@
 
+import 'dart:html';
 import 'dart:ui';
  import 'package:carousel_slider/carousel_slider.dart';
 import 'package:finalwecodeproject/models/category_model.dart';
@@ -33,17 +34,28 @@ class homeScreen extends StatelessWidget {
       appBar: customAppbarWiedget(title:'Online Shopping'),
      
       bottomNavigationBar: custom_navBar(),
-      body: Container ( 
-        child: CarouselSlider(
-        options: CarouselOptions(
-          aspectRatio: 2.0,
-          enlargeCenterPage: true,
-          enableInfiniteScroll: false,
-          initialPage: 2,
-          autoPlay: true,
-        ),
-        items: Category.categories.map((Category) =>HeroCarsoulCard(category: Category)).toList(),
-      )),
+      body: Column(
+        children: [
+          Container ( 
+            child: CarouselSlider(
+            options: CarouselOptions(
+              aspectRatio: 2.0,
+              enlargeCenterPage: true,
+              enableInfiniteScroll: false,
+              initialPage: 2,
+              autoPlay: true,
+            ),
+            items: Category.categories.map((Category) =>HeroCarsoulCard(category: Category)).toList(),
+          )),
+          sectionTile(title:'RECOMMENDED'),
+          Stack(children: [
+               Container()
+
+
+
+          ],)
+        ],
+      ),
       
     );
   }
