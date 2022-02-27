@@ -16,7 +16,7 @@ class customAppbarWiedget extends StatelessWidget with PreferredSizeWidget {
       elevation: 0,
       title: Container(
         margin: EdgeInsets.only(left: 50),
-        color:Colors.deepPurpleAccent,
+        color:Colors.black,
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 7,), 
         child: Text(
                     title,
@@ -24,7 +24,7 @@ class customAppbarWiedget extends StatelessWidget with PreferredSizeWidget {
                           //  colo
                       ),
                     ),
-                    iconTheme: IconThemeData(color: Colors.deepPurpleAccent),
+                    iconTheme: IconThemeData(color: Colors.black),
                     actions: [IconButton(icon:Icon(Icons.favorite),onPressed: (){
                       Navigator.pushNamed(context, '/wishlistScreen');
                     })],
