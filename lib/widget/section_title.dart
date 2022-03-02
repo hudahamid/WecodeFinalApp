@@ -11,11 +11,14 @@ class sectionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:20.0),
+      padding: const EdgeInsets.symmetric(horizontal:20.0,vertical: 30),
+      
       child: Align
       (
         alignment:Alignment.topLeft ,
-        child: Text('RECOMMENDED',style: Theme.of(context).textTheme.headline3,)
+        
+      
+        child: Text('RECOMMENDED',style: Theme.of(context).textTheme.headline5,)
         
         ),
     );

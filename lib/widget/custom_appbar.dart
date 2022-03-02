@@ -25,7 +25,7 @@ class customAppbarWiedget extends StatelessWidget with PreferredSizeWidget {
                       ),
                     ),
                     iconTheme: IconThemeData(color: Colors.black),
-                    actions: [IconButton(icon:Icon(Icons.favorite),onPressed: (){
+                    actions: [IconButton(icon:Icon(Icons.favorite,),onPressed: (){
                       Navigator.pushNamed(context, '/wishlistScreen');
                     })],
       
