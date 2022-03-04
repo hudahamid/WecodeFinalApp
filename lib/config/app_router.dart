@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:finalwecodeproject/models/category_model.dart';
 import 'package:finalwecodeproject/screens/screens.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class AppRouter {
            return  wishlistScreen.route();
    
         case catalogScreen.routeName:
-           return  catalogScreen.route();
+           return  catalogScreen.route(category: settings.arguments as Category);
            
         case productScreen.routeName:
            return  productScreen.route();
