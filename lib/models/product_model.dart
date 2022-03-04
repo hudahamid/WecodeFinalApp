@@ -19,7 +19,7 @@ import 'package:flutter/cupertino.dart';
           required this.category,
           required this.imageUrl,
           required this.price,
-          required this.isRecommended,
+          required this.isRecommended,  
           required this.isPopular,
 
 
