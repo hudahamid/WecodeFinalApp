@@ -2,11 +2,13 @@
 import 'dart:ui';
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:finalwecodeproject/blocs/wishlist/wishlist_bloc.dart';
 import 'package:finalwecodeproject/models/model.dart';
 import 'package:finalwecodeproject/models/product_model.dart';
 import 'package:finalwecodeproject/widget/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class productScreen extends StatelessWidget {
   static  const  String routeName= '/product';
@@ -38,7 +40,24 @@ class productScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
             IconButton(onPressed: (){}, icon: Icon(Icons.share,color: Colors.white,)),
-              IconButton(onPressed: (){}, icon: Icon(Icons.favorite,color: Colors.white)),
+
+            BlocBuilder<WishlistBloc,WishlistState>(
+                  builder: (context, state)
+                  {
+                    return IconButton(
+                      onPressed: (){
+                        context.read<WishlistBloc>()
+                        .add(AddWishlistProduct(product));
+                         
+                         final snackBar=
+                         SnackBar(content: Text('Added to your wishlist!'));
+                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        
+                        }, 
+                      icon: Icon(Icons.favorite,color: Colors.white));
+                  }
+                ),
+              
               ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.white),
                 onPressed: (){}, child: Text('ADD TO CART',  style :Theme.of(context).textTheme.headline4!))
