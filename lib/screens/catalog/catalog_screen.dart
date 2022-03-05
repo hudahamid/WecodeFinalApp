@@ -17,16 +17,16 @@ class catalogScreen extends StatelessWidget {
       
       );
   }
-   final Category category;
+   final Category? category;
 
-  const catalogScreen( { Key? key ,required this.category }) : super(key: key) ; // may have problem here mine
+  const catalogScreen( { Key? key ,this.category }) : super(key: key) ; // may have problem here mine
   @override
   Widget build(BuildContext context) {
-    final List<Product> categoryProducts=Product.products.where((product) =>product.category==category.name).toList();
+    final List<Product> categoryProducts=Product.products.where((product) =>product.category==category!.name).toList();
     return Scaffold(
       backgroundColor: Colors.white,
       
-      appBar: customAppbarWiedget(title:category.name),
+      appBar: customAppbarWiedget(title:category!.name),
      
       bottomNavigationBar: custom_navBar(),
 
