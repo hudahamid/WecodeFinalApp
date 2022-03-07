@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:finalwecodeproject/blocs/wishlist/wishlist_bloc.dart';
+//import 'package:finalwecodeproject/blocs/wishlist/wishlist_bloc_dart';
 import 'package:finalwecodeproject/config/app_router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,12 +19,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (_)=>WishlistBloc()..add(StartWishlist())),
-      ],
-      
-    child: MaterialApp(
+    return  MaterialApp(
       title: 'Flutter Demo',
       
       theme: ThemeData(
@@ -35,7 +30,14 @@ class MyApp extends StatelessWidget {
       initialRoute: homeScreen.routeName,
 
       home: homeScreen( )
-    ));
+    );
   }
 }
-
+/*
+MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_)=>WishlistBloc()..add(StartWishlist())),
+      ],
+      
+    child:
+*/

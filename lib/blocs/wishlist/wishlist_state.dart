@@ -1,10 +1,10 @@
-
+/*
 import 'package:finalwecodeproject/models/wishlist_model.dart';
 import 'package:flutter/material.dart';
 
 import 'package:equatable/equatable.dart';
 
-part of 'wishlist_bloc.dart';
+part of 'wishlist_bloc_dart';
 
 abstract class WishlistState extends Equatable{
 const WishlistState();
@@ -24,4 +24,4 @@ class wishlistLoaded extends WishlistState{
 
 }
 
-class wishlistError extends WishlistState{}
+class wishlistError extends WishlistState{}*/
