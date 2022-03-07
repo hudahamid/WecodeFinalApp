@@ -1,4 +1,5 @@
 
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:finalwecodeproject/models/wishlist_model.dart';
 
@@ -6,8 +7,15 @@ import 'package:finalwecodeproject/models/wishlist_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../models/model.dart';
-part 'wishlist_event.dart';
+
 part 'wishlist_state.dart';
+part 'wishlist_event.dart';
+
+
+//import '../wishlist/wishlist_event.dart';
+//import '../wishlist/wishlist_state.dart';
+
+
 
 class WishlistBloc extends Bloc<wishlistEvent,WishlistState>{
 WishlistBloc():super (wishlistLoading());

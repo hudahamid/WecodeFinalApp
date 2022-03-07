@@ -80,7 +80,7 @@ class cartScreen extends StatelessWidget {
                          style: Theme.of(context).textTheme.headline5
                          )
                      ],),
-                     SizedBox(height: 10,)
+                     SizedBox(height: 10,),
                      Row(
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                    children: [
